@@ -37,21 +37,21 @@ const Header = ({ onAddTask, onSearch }) => {
         <h1 className="text-lg md:text-xl font-semibold text-center md:text-left">
           Task Management
         </h1>
-        <div className="flex flex-row items-center gap-2">
+        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-3 w-full md:w-auto">
           {/* Search Input */}
-          <div className="relative min-w-[200px]">
+          <div className="relative w-full md:w-64">
             <FiSearch className="absolute left-3 top-3 text-gray-400" />
             <input
               type="text"
               placeholder="Search tasks..."
-              className="bg-transparent text-white pl-10 pr-2 py-1 md:py-2  md:w-64 rounded-lg border-2 border-slate-50 focus:outline-none"
+              className="bg-transparent text-white pl-10 pr-2 py-1 md:py-2 w-full rounded-lg border-2 border-slate-50 focus:outline-none"
               onChange={(e) => onSearch(e.target.value)}
             />
           </div>
           {/* Add Task Button */}
           <button
             onClick={() => setIsModalOpen(true)}
-            className="text-sm md:text-base bg-purple-600 px-4 py-2 rounded-lg hover:bg-purple-500 min-w-[100px] md:w-auto"
+            className="text-sm md:text-base bg-purple-600 px-4 py-2 rounded-lg hover:bg-purple-500 w-full md:w-auto"
           >
             Add Task
           </button>
@@ -61,7 +61,7 @@ const Header = ({ onAddTask, onSearch }) => {
       {/* Modal for Adding Task */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-gray-800 text-white p-6 rounded-lg w-11/12 md:w-96">
+          <div className="bg-gray-800 text-white p-6 rounded-lg w-11/12 sm:w-96 md:w-96">
             <h2 className="text-xl font-semibold mb-4">Add New Task</h2>
             <div className="flex flex-col gap-4">
               {/* Title Input */}
