@@ -7,7 +7,7 @@ const TaskList = ({ tasks, onToggle, onDelete, onEdit }) => {
         tasks.map((task) => (
           <div
             key={task.id}
-            className="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-md flex flex-col justify-between"
+            className="bg-[#00296b] p-4 sm:p-6 rounded-lg shadow-md flex flex-col justify-between"
           >
             <div>
               <h3 className="text-lg font-semibold text-white truncate">

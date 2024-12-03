@@ -8,7 +8,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="bg-gray-900 text-white w-64 min-h-screen p-4">
+    <div className="bg-[#00296b] text-white w-64 min-h-screen p-4">
       <h2 className="text-2xl font-bold mb-6">Task Karo</h2>
       <nav>
         <ul>
