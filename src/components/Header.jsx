@@ -33,23 +33,25 @@ const Header = ({ onAddTask, onSearch }) => {
 
   return (
     <>
-      <header className="bg-[#00296b] text-white mt-20 md:mt-0 p-4 mb-6 flex justify-between items-center">
-        <h1 className="hidden md:flex md:text-lg text-xl font-semibold ">Task Management</h1>
-        <div className="flex items-center gap-4">
+      <header className="bg-[#00296b] text-white p-4 flex flex-col md:flex-row md:justify-between md:items-center gap-4 md:gap-0">
+        <h1 className="text-lg md:text-xl font-semibold text-center md:text-left">
+          Task Management
+        </h1>
+        <div className="flex flex-row items-center gap-4">
           {/* Search Input */}
-          <div className="relative min-w-[100px]">
-            <FiSearch className="absolute left-3 top-2.5 text-gray-400" />
+          <div className="relative min-w-screen">
+            <FiSearch className="absolute left-3 top-3 text-gray-400" />
             <input
               type="text"
               placeholder="Search tasks..."
-              className="bg-transparent text-white pl-10 pr-4 py-2 rounded-lg border-2 border-slate-50 focus:outline-none"
+              className="bg-transparent text-white pl-10 pr-4 py-2  md:w-64 rounded-lg border-2 border-slate-50 focus:outline-none"
               onChange={(e) => onSearch(e.target.value)}
             />
           </div>
           {/* Add Task Button */}
           <button
             onClick={() => setIsModalOpen(true)}
-            className=" text-sm md:text-xl bg-purple-600 px-4 py-2 rounded-lg hover:bg-purple-500"
+            className="text-sm md:text-base bg-purple-600 px-4 py-2 rounded-lg hover:bg-purple-500 min-w-[100px] md:w-auto"
           >
             Add Task
           </button>
@@ -59,7 +61,7 @@ const Header = ({ onAddTask, onSearch }) => {
       {/* Modal for Adding Task */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-gray-800 text-white p-6 rounded-lg w-96">
+          <div className="bg-gray-800 text-white p-6 rounded-lg w-11/12 md:w-96">
             <h2 className="text-xl font-semibold mb-4">Add New Task</h2>
             <div className="flex flex-col gap-4">
               {/* Title Input */}

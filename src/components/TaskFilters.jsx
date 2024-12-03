@@ -4,7 +4,7 @@ const TaskFilters = ({ activeFilter, onFilterChange }) => {
   const filters = ["All", "Completed", "Pending", "Overdue"];
 
   return (
-    <div className="flex gap-4 mb-6 ml-4">
+    <div className="flex gap-4 mb-6 ml-4 mt-5">
       {filters.map((filter) => (
         <button
           key={filter}
