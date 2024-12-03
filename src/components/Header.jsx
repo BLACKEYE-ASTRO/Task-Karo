@@ -33,7 +33,7 @@ const Header = ({ onAddTask, onSearch }) => {
 
   return (
     <>
-      <header className="bg-[#00296b] text-white p-4 mb-6 flex justify-between items-center">
+      <header className="bg-[#00296b] text-white mt-20 md:mt-0 p-4 mb-6 flex justify-between items-center">
         <h1 className="hidden md:flex md:text-lg text-xl font-semibold ">Task Management</h1>
         <div className="flex items-center gap-4">
           {/* Search Input */}
