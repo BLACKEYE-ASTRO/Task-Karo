@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { AiOutlineDashboard } from "react-icons/ai";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
-
+import logo from "../assets/Task_Logo.png";
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -27,7 +27,10 @@ const Sidebar = () => {
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } lg:transform-none lg:relative lg:translate-x-0 transition-transform duration-300`}
       >
-        <h2 className="text-2xl font-bold mb-6 ml-10 md:ml-0">Task Karo</h2>
+        <div className="flex gap-2">
+        <img src={logo} alt="Logo" className="h-8 w-8 ml-12 md:ml-0" />
+        <h2 className="text-2xl font-bold mb-6 ">Task Karo</h2>
+        </div>
         <nav>
           <ul>
             {menuItems.map((item) => (
