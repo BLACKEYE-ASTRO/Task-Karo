@@ -4,7 +4,7 @@ import { AiOutlineDashboard } from "react-icons/ai";
 
 const Sidebar = () => {
   const menuItems = [
-    { name: "Dashboard", path: "/tasks", icon: <AiOutlineDashboard /> },
+    { name: "Dashboard", path: "/", icon: <AiOutlineDashboard /> },
   ];
 
   return (
