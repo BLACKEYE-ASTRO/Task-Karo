@@ -37,7 +37,7 @@ const Header = ({ onAddTask, onSearch }) => {
         <h1 className="hidden md:flex md:text-lg text-xl font-semibold ">Task Management</h1>
         <div className="flex items-center gap-4">
           {/* Search Input */}
-          <div className="relative">
+          <div className="relative min-w-[100px]">
             <FiSearch className="absolute left-3 top-2.5 text-gray-400" />
             <input
               type="text"
@@ -49,7 +49,7 @@ const Header = ({ onAddTask, onSearch }) => {
           {/* Add Task Button */}
           <button
             onClick={() => setIsModalOpen(true)}
-            className="bg-purple-600 px-4 py-2 rounded-lg hover:bg-purple-500"
+            className=" text-sm md:text-xl bg-purple-600 px-4 py-2 rounded-lg hover:bg-purple-500"
           >
             Add Task
           </button>

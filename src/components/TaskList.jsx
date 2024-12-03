@@ -29,11 +29,11 @@ const TaskList = ({ tasks, onToggle, onDelete, onEdit }) => {
               {/* Toggle Completed Button */}
               <button
                 onClick={() => onToggle(task.id)}
-                className={`px-3 sm:px-4 py-2 rounded-lg flex-1 mr-2 ${
+                className={`px-2 sm:px-4 py-2 rounded-lg flex-1 mr-2 ${
                   task.completed
                     ? "bg-green-600 hover:bg-green-500"
-                    : "bg-purple-600 hover:bg-purple-500"
-                } text-white`}
+                    : "bg-purple-600   hover:bg-purple-500"
+                } text-white text-sm md:text-xl`}
                 aria-label={
                   task.completed
                     ? "Mark task as incomplete"
@@ -46,7 +46,7 @@ const TaskList = ({ tasks, onToggle, onDelete, onEdit }) => {
               {/* Edit Button */}
               <button
                 onClick={() => onEdit(task)}
-                className="bg-blue-600 hover:bg-blue-500 px-3 sm:px-4 py-2 rounded-lg text-white flex-1 mx-1"
+                className="text-sm md:text-xl bg-blue-600 hover:bg-blue-500 px-2 sm:px-4 py-2 rounded-lg text-white flex-1 mx-1"
                 aria-label="Edit task"
               >
                 Edit
@@ -55,7 +55,7 @@ const TaskList = ({ tasks, onToggle, onDelete, onEdit }) => {
               {/* Delete Button */}
               <button
                 onClick={() => onDelete(task.id)}
-                className="bg-red-600 hover:bg-red-500 px-3 sm:px-4 py-2 rounded-lg text-white flex-1 ml-2"
+                className="text-sm md:text-xl bg-red-600 hover:bg-red-500 px-2 sm:px-4 py-2 rounded-lg text-white flex-1 ml-2"
                 aria-label="Delete task"
               >
                 Delete

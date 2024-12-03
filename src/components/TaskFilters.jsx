@@ -11,8 +11,8 @@ const TaskFilters = ({ activeFilter, onFilterChange }) => {
           onClick={() => onFilterChange(filter.toLowerCase())}
           className={`px-4 py-2 rounded-lg ${
             activeFilter === filter.toLowerCase()
-              ? "bg-purple-600 text-white"
-              : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+              ? "bg-purple-600 text-sm md:text-xl text-white"
+              : "bg-gray-700 text-sm md:text-xl text-gray-300 hover:bg-gray-600"
           }`}
         >
           {filter}
