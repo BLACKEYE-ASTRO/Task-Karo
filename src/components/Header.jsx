@@ -37,14 +37,14 @@ const Header = ({ onAddTask, onSearch }) => {
         <h1 className="text-lg md:text-xl font-semibold text-center md:text-left">
           Task Management
         </h1>
-        <div className="flex flex-row items-center gap-4">
+        <div className="flex flex-row items-center gap-2">
           {/* Search Input */}
-          <div className="relative min-w-screen">
+          <div className="relative min-w-[200px]">
             <FiSearch className="absolute left-3 top-3 text-gray-400" />
             <input
               type="text"
               placeholder="Search tasks..."
-              className="bg-transparent text-white pl-10 pr-4 py-2  md:w-64 rounded-lg border-2 border-slate-50 focus:outline-none"
+              className="bg-transparent text-white pl-10 pr-4 py-1 md:py-2  md:w-64 rounded-lg border-2 border-slate-50 focus:outline-none"
               onChange={(e) => onSearch(e.target.value)}
             />
           </div>
