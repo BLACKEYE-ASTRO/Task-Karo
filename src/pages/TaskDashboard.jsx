@@ -25,9 +25,9 @@ const TaskDashboard = () => {
   });
 
   return (
-    <div className="flex bg-[#03071e]">
+    <div className="flex ">
       <Sidebar />
-      <div className="flex-1 min-h-screen">
+      <div className="flex-1">
         <Header onAddTask={(task) => dispatch(addTask(task))} onSearch={setSearchQuery} />
         <TaskFilters activeFilter={activeFilter} onFilterChange={(filter) => setActiveFilter(filter)} />
         <TaskList
